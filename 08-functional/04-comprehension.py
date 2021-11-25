@@ -12,7 +12,7 @@ squared_numbers: list[int] = [number * number for number in numbers]
 # (2^5 = 32, etc)
 
 ################################################################################
-
+powers_of_two : list[int] = [2**number for number in numbers]
 ################################################################################
 
 # Il s'agit probablement de la syntaxe la plus simple à comprendre !

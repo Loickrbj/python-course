@@ -17,7 +17,7 @@ squared_even_numbers: list[int] = \
 evil_numbers: list[int] = [13, 666]
 
 ################################################################################
-
+powers_of_two : list[int] = [2**number for number in numbers if number not in evil_numbers]
 ################################################################################
 
 

@@ -46,7 +46,8 @@ products: list[Product] = [
 ]
 
 ################################################################################
-
+total_cost : int = functools.reduce(lambda cost, product : cost +  (product["quantity"] * product["cost"]), products, 0)
+print (total_cost)
 ################################################################################
 
 # Les valeurs d'initialisation peuvent être utiles même si on ne change pas de

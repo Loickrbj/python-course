@@ -18,7 +18,12 @@ squared_numbers: list[int] = list(map(square, numbers))
 # (2^5 = 32, etc)
 
 ################################################################################
+def power_of_two_funct(number : int) ->int :
 
+    return 2**number
+
+
+powers_of_two : list[int] = list(map(power_of_two_funct,numbers))
 ################################################################################
 
 # Cette approche, qui se base plutôt sur des opérations que sur la programmation

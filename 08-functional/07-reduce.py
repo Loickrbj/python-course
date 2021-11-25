@@ -23,7 +23,9 @@ sum: int = functools.reduce(lambda total, current: total + current, numbers)
 # Stockez le résultat dans une variable odd_numbers_sum.
 
 ################################################################################
+odd_numbers_sum : int = functools.reduce(lambda total, current : total + current if current%2 !=0 else total, numbers)
 
+print(odd_numbers_sum)
 ################################################################################
 
 

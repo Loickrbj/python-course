@@ -15,7 +15,8 @@ squared_numbers: list[int] = list(map(lambda number: number * number, numbers))
 # (2^5 = 32, etc)
 
 ################################################################################
-
+lambda pow2 : 2**pow2
+powers_of_two : list[int] = list(map(lambda pow2 : 2**pow2,numbers))
 ################################################################################
 
 # N'oubliez pas de respecter la longueur de 79 caractères max. par ligne de

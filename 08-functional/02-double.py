@@ -37,7 +37,12 @@ products: list[Product] = [
 quantities: list[int] = [1, 1, 2]
 
 ################################################################################
+def calcul(product : Product, quantity : int) -> int :
+  return product["cost"] * quantity
 
+total_cost : list[int]  = list(map(calcul,products,quantities))
+
+print(total_cost)
 ################################################################################
 
 

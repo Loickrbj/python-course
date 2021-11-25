@@ -34,14 +34,24 @@ users: list[User] = [
   }
 ]
 
-################################################################################
 
 ################################################################################
+def user (user : User) -> str :
+  user_str : str = ""
+  if user.get("age") != None:
+    user_str = user.get("firstname") + " " + user.get("lastname") + " is " + str(user.get("age"))    
+  else:
+    user_str = user.get("firstname") + " " + user.get("lastname")
+  print(user_str)
+  return user_str
+
+user_informations : list[str] = list(map(user,users))
+################################################################################
 
 
 
 
-
+print (user_informations)
 
 
 
