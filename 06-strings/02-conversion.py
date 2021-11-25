@@ -15,6 +15,14 @@
 
 ################################################################################
 
+age : str = input("age : ")
+if (age.isnumeric()):
+    if int(age) >= 18 :
+        print("majeur")
+    else:
+        print("pas majeur")
+else :
+    print("ERREUR")
 ################################################################################
 
 # Astuce : vous pouvez utiliser un ternaire pour afficher "Mineur" ou "Majeur"

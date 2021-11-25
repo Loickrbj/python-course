@@ -12,4 +12,4 @@
 
 # Si vous voyez "18 + ans" souligné en rouge, c'est bon !
 
-age: int = 18 + "ans"
+#age: int = 18 + "ans"

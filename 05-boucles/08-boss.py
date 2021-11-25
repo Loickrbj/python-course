@@ -10,37 +10,21 @@
 # suite de Fibonacci (ou 0 si aucun ne correspond).
 
 ################################################################################
+def find_in_fibonacci_suite(nbrs : list[int]) :
+    fibonacci : list[int] = [0,1]
+    result : int  = 0
+    for i in range(2,20):
+        fibonacci.append(fibonacci[-2] + fibonacci[-1])
+
+    for j in range(len(nbrs)):
+        for x in range(len(fibonacci)) :
+            if nbrs[j] == fibonacci[x] :
+                return nbrs[j]
+    return result
+            
+
 
 ################################################################################
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

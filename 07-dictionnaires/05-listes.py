@@ -13,6 +13,13 @@ class Student(TypedDict):
     notes: list[int]
 
 ################################################################################
+students : list[Student] = [
+    {   "firstname" : "loick","lastname" : "Roberjot","notes" : [10,30,20]},
+    {   "firstname" : "loick","lastname" : "Roberjot","notes" : [10,30,20]},
+    {   "firstname" : "loick","lastname" : "Roberjot","notes" : [10,30,20]}
+]
+
+
 
 ################################################################################
 

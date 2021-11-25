@@ -15,7 +15,11 @@ def multiple(a: float, b: float) -> float:
 
 result: float = multiple(6, 8)
 ################################################################################
+def get_square(x : float):
+    return pow(x,2)
 
+square : float = get_square(8)
+double_square : float  = get_square(square)
 print("square :", square)
 print("cube :", double_square)
 

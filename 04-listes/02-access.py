@@ -21,7 +21,8 @@ work_days: list[int] = [1, 2, 3, 4, 5]
 ################################################################################
 
 
-
+first_day : str = days[0]
+last_day_of_work : str = days[work_days[-1]]
 
 
 

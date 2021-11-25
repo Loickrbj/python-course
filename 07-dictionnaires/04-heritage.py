@@ -24,7 +24,25 @@ class Car(Vehicle):
     doors_count: int
     kilometers: int
 
+
 ################################################################################
+class Train(Vehicle):
+    doors_count : int
+    kilometers: int
+
+my_car : Car = {
+    "seats" : 4,
+    "cost" : 1,
+    "doors_count" : 5,
+    "kilometers" : 1000
+}
+
+my_train : Train = {
+    "seats" : 40,
+    "cost" : 10,
+    "doors_count" : 10,
+    "kilometers" : 100000
+}
 ################################################################################
 
 # Pas de validation automatique pour cet exercice. Encore une fois, vérifiez

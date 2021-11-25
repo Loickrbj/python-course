@@ -11,6 +11,7 @@
 ################################################################################
 pizza_slices: int = 8
 persons: int = 3
+slices_per_person : float = pizza_slices/persons
 ################################################################################
 
 print("Résultat: ", slices_per_person)

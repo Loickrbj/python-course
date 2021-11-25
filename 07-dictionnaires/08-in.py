@@ -36,6 +36,12 @@ users: list[User] = [
 
 ################################################################################
 premium_members_count: int = 0
+for user in users :
+    if "premium_since" in user and "banned_on" not in user:
+        premium_members_count += 1
+
+
+
 ################################################################################
 
 

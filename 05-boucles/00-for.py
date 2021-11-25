@@ -9,11 +9,19 @@
 
 ################################################################################
 notes: list[int] = [10, 15, 12, 8, 7]
+average : float = 0
+sum : float = 0
 ################################################################################
 
 # Note : si vous connaissez déjà python, vous savez peut-être qu'il existe des
 # méthodes plus simples pour calculer une moyenne... Mais chaque chose en son
 # temps.
+for i in range(len(notes)):
+    sum = sum+notes[i]
+
+average = sum/len(notes)
+
+
 
 
 

@@ -13,6 +13,7 @@ days: list[str] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 # Conseil : utilisez un index négatif en borne finale, plutôt que de compter
 # jusqu'où s'arrêter.
+work_days : list[str] = days[1:-1]
 
 
 

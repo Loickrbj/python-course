@@ -8,5 +8,10 @@
 # Pas de correction automatique pour cet exercice.
 
 ################################################################################
-
+while True :
+    age : str = input("Age: ")
+    if age.isnumeric() and int(age) > 0 and int(age) < 130:
+        break
+    else :
+        print("rentre une date vaide" )
 ################################################################################

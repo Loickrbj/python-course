@@ -10,7 +10,23 @@
 # Créez un dictionnaire utilisant ce type.
 
 ################################################################################
+from typing import TypedDict
 
+
+class Book(TypedDict, total = False):
+    auteur : str
+    title : str
+    year: int
+    read : bool
+
+obo : Book = {
+
+    "auteur" : "alexis",
+    "title" : "legende hobo",
+    "year" : 2014,
+    "read" : True
+
+}
 ################################################################################
 
 # Pas de validation automatique pour cet exercice. À nouveau, vérifiez que votre

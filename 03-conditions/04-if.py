@@ -17,7 +17,7 @@ first_visit: bool = True
 if first_visit:
     print('Welcome !')
 ################################################################################
-
+get_rectange_surface(width : float, )
 print(get_rectangle_surface(4, 6))
 
 

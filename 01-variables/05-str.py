@@ -12,6 +12,8 @@
 first_name: str = "Patrick"
 last_name: str = "Sébastien"
 birth_year: int = 1953
+
+presentation : str = first_name + " " + last_name + " est né en " + str(birth_year)
 ################################################################################
 
 print(presentation)

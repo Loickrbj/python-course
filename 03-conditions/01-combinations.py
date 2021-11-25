@@ -16,6 +16,8 @@ country: str = "France"
 age: int = 20
 is_teenager: bool = (age >= 10 and age <= 19)
 ################################################################################
+can_buy_gun : bool = (age>= 21 and country == "USA")
+can_drink : bool = (age >= 18 and country == "France" or age>= 21 and country =="USA")
 
 print("Is teenager :", is_teenager);
 print("Can buy gun :", can_buy_gun);

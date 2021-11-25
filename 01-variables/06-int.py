@@ -12,6 +12,7 @@
 ################################################################################
 number_of_months: str = "12"
 salary_per_month: str = "1554.58"
+salary_per_year : float = int(number_of_months) * float(salary_per_month)
 ################################################################################
 
 print("Résultat: ", salary_per_year)

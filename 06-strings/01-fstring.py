@@ -14,7 +14,7 @@ day: str = "mercredi"
 temperature: int = 17
 ################################################################################
 
-
+message = f"Nous sommes mercredi et il fait {17} degrés"
 
 
 

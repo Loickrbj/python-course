@@ -6,6 +6,7 @@
 ################################################################################
 first_month: str = "January"
 second_month: str = "February"
+third_month : str = "March"
 ################################################################################
 
 # Évidemment, cette structure de données est bien pauvre ! On ne va pas créer

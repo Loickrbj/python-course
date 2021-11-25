@@ -21,6 +21,11 @@ gender: str = "F"
 nationality: str = "French"
 
 is_minor = (age < 18)
+
+is_adult : bool = (age>=18)
+is_male : bool = (gender == "M")
+is_stranger : bool = (nationality != "French")
+
 ################################################################################
 
 # Les parenthèses autour du test sont optionnelles, mais peuvent vous aider à

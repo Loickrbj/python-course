@@ -9,7 +9,11 @@
 # N'oubliez pas d'utiliser break lorsque vous avez trouvé.
 
 ################################################################################
+for i in reversed(range(50)):
 
+    if (i**2 < 1000):
+        result = i
+        break
 ################################################################################
 
 # Indice : de quel nombre partir ? n'importe lequel dont vous savez que son

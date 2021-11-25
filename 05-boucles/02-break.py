@@ -17,6 +17,13 @@ numbers: list[int] = [4, 5, 78, 45, 84, 101, 10, 14, 87, 45, 2, 45, 66, 4, 48]
 # Voir aussi : l'instruction continue permet de sauter directement à la
 # prochaine itération de la boucle sans exécuter le reste du bloc.
 # Son utilisation est plus rare.
+multiple_of_7 : int
+for i in range(len(numbers)):
+    if (numbers[i]%7 == 0):
+        multiple_of_7 = numbers[i]
+        break
+    else :
+        continue
 
 
 

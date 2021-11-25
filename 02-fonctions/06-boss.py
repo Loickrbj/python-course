@@ -8,6 +8,11 @@
 
 ################################################################################
 
+def add(a: float, b: float) -> float:
+    return a + b
+
+
+result= add(add(10, 4), add(6, 7))
 print("Result :", result)
 
 

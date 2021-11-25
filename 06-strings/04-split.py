@@ -16,7 +16,10 @@
 ################################################################################
 ingredients: str = "tomato, cheese, lettuce, pickles"
 ################################################################################
-
+list_ingredients : list[str] = ingredients.split(",")
+list_ingredients.remove(" cheese")
+ingredients = " ~".join(list_ingredients)
+print(ingredients)
 
 
 

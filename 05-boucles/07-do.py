@@ -17,7 +17,13 @@
 # Stockez le premier nombre dépassant 10000 dans une variable "result"
 
 ################################################################################
-
+number : int = 1
+result : int = 1
+while True : 
+    number = number +1
+    result = result * number
+    if result > 10000:
+        break
 ################################################################################
 
 

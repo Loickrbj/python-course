@@ -11,6 +11,7 @@
 # Trouvez la note la plus élevée du dictionnaire "notes" et stockez le nom de la
 # matière associée dans une variable best_course
 
+from ast import Index
 from typing import TypedDict
 
 class Notes(TypedDict):
@@ -25,8 +26,17 @@ notes: Notes = {
 }
 
 ################################################################################
-best_course: str = ''
-################################################################################
+cpt = 0
+best_note = 0
+for note in notes.values() :
+    if cpt == 0:
+        best_note = note   
+    else :
+        if note > best_note:
+            best_note = note
+    cpt +=1
+best_course: str = list(notes.keys())[list(notes.values()).index(best_note)]
+###############################################################################
 
 
 

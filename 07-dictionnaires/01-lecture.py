@@ -18,7 +18,12 @@ interstellar = {
     "year": 2014
 }
 
+
+
 ################################################################################
+interstellar["director"] = inception["director"]
+interstellar["composer"] = inception["composer"]
+
 
 ################################################################################
 

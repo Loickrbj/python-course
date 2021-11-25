@@ -20,7 +20,20 @@ album: Album = {
 }
 
 ################################################################################
+class Book(TypedDict):
+    auteur : str
+    title : str
+    year: int
+    read : bool
 
+obo : Book = {
+
+    "auteur" : "alexis",
+    "title" : "legende hobo",
+    "year" : 2014,
+    "read" : True
+
+}
 ################################################################################
 
 # Pas de validation automatique pour cet exercice.
