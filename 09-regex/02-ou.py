@@ -4,6 +4,7 @@
 
 # Voici un exemple :
 
+from abc import abstractmethod
 import re
 
 match = re.search(r'hello|goodbye', 'hello world!')
@@ -15,7 +16,10 @@ if (match):
 
 ################################################################################
 def starts_with_vowel(sample: str) -> bool:
-    return True
+    match = re.search(r'^a|e|i|o|u|y',sample)
+    if match :
+        return True
+    return False
 ################################################################################
 
 

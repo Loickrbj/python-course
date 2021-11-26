@@ -18,7 +18,11 @@ if (match):
 
 ################################################################################
 def contains(target: str, sample: str) -> bool:
-    return True
+    match = re.search(target,sample)
+    if(match):
+        return True
+    else : 
+        return False
 ################################################################################
 
 # Il existe une syntaxe pour transformer un résultat de match en booléen ;)

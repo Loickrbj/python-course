@@ -15,7 +15,7 @@
 import re
 
 def is_valid_mail(mail: str) -> bool:
-    return True
+    return bool(re.search(r'^[a-z0-9]+[a-z0-9\.]+[a-z0-9]+@+[a-z0-9]+[a-z0-9\.]+[a-z0-9]+\.[a-z0-9]{2,3}$',mail))
 ################################################################################
 
 # Tous les mails suivants sont valides : 

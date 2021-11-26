@@ -24,7 +24,8 @@ if (match):
 
 ################################################################################
 def is_valid_version(version: str) -> bool:
-    return True
+
+    return bool(re.search(r'^(\d\.\d)(\.\d)?$', version))
 ################################################################################
 
 # Attention ! Dans une regex, un point "." représente n'importe quel caractère.

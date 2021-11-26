@@ -17,7 +17,19 @@ if (match):
 # À partir de la variable date, récupérez les variables year, month et day
 
 ################################################################################
+year: str = ""
+month : str = ""
+day : str = ""
 date: str = "2021-12-31"
+match = re.search(r'^(?P<year>\d{1,})-(?P<month>\d{1,2})-(?P<day>\d{1,2})$',date)
+
+if(match):
+    year = match.group("year")
+    print(year)
+    month = match.group("month")
+    print(month)
+    day = match.group('day')
+    print(day)
 ################################################################################
 
 
