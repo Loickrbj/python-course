@@ -1,7 +1,7 @@
 # Écrivez la fonction is_valid_email qui suivra les règles (simplifiées)
 # suivantes. Un mail valide doit :
 
-# - commencer par une chaîne d'au moins trois caractère contenant soit :
+# - commencer par une chaîne d'au moins trois caractères contenant soit :
 #   - des lettres minuscules
 #   - des chiffres
 #   - des points (mais pas au début ou à la fin de la chaîne). On accepte que
@@ -25,15 +25,14 @@ valid: list[str] = [
     "j0hn.doe@mai1.com",
     "john.doe.yeah.yeah.yeah@mail.com",
     "john.doe@mail.mail.mail.com",
-    "j@mail.com",
-    "j.j@mail.com",
-    "johh.doe@m.com",
-    "jj@mail.com"
+    "j.j@mail.com"
 ]
 
 # Tous les mails suivant sont invalides :
 
 invalid: list[str] = [
+    "j@mail.com",
+    "jj@mail.com",
     ".john.doe@mail.com",
     ".john.doe.@mail.com",
     "john.doe@.mail.com",
@@ -43,7 +42,8 @@ invalid: list[str] = [
     "John.doe@mail.com",
     "john.doe@Mail.com"
     "@john.doe@mail.com",
-    "john.doe@mail.com@"
+    "john.doe@mail.com@",
+    "johh.doe@m.com",
 ]
 
 # Utilise https://regex101.com/ pour construire votre regex. Dans "Test string",
