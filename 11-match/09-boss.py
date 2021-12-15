@@ -20,10 +20,35 @@
 # trésor (variable playing -> false)
 
 ################################################################################
+playing = True
+player_coord : list[int] = [0,0]
+tresor_coord : list[int] =  [5,2]
+
 def execute(command: str) -> None:
+    global playing 
+    if len(command.split(" ")) == 1 : command = command + " 1" 
+    match command.split(" "):
+        case ["nord", number]:
+            player_coord[1] += int(number)
+        case ["sud", number]:
+            player_coord[1] -= int(number)
+        case ["ouest", number]:
+            player_coord[0] -= int(number)
+        case ["est", number]:
+            player_coord[0] += int(number)
+        case _ :
+            print("Commande invalide reéssayez")
+    print('tu est en x: ' +  str(player_coord[0]) + " y: " + str(player_coord[1]))
+    if player_coord == tresor_coord:
+        print("Tu as trouvé le trésor FELICITATION !!!!")
+        playing = False
+
 ################################################################################
 
-playing = True
+
+
+
+
 
 while playing:
     execute(input("Que souhaitez-vous faire ?\n"))

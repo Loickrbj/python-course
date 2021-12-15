@@ -30,6 +30,19 @@ def get_color_type(color: Tuple[int, int, int] | Tuple[int, int, int, int] | str
 
 ################################################################################
 def get_formatted_date(date: Any) -> Tuple[int, int, int] | None:
+     match date:
+        case [year,mouth,day] if year > 1900:
+            return (year,mouth,day)
+        case [month,day]:
+            return (2021,month,day)
+        case str(date) if str(date).count('-') == 2 :
+            d  = str(date).split("-")
+            return (int(d[0]),int(d[1]),int(d[2]))    
+        case str(date) if str(date).count('/') == 2 :
+            d  = str(date).split("/")
+            return (int(d[0]),int(d[1]),int(d[2]))    
+        case _ : 
+            return None
 ################################################################################
 
 # Cette fois-ci, on utilise le type date: Any, car notre fonction peut recevoir

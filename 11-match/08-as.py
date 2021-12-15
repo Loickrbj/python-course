@@ -20,6 +20,11 @@ def compute(command: str) -> None:
 from typing import Tuple
 
 def get_formatted_date(date: str) -> Tuple[(int, int, int)] | None:
+    match date.split('-'):
+        case [('2021' |'2022' | '2023') as year, month, day ]:
+            return (int(year),int(month),int(day))
+        case _ :
+            return None
 ################################################################################
 
 

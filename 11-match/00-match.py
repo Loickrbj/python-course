@@ -22,6 +22,18 @@ def http_error(status):
 ################################################################################
 def get_food_type(food: str):
 
+    match(food):
+        case "fries": 
+            return "vegan"
+        case "tomato" :
+            return "vegan"
+        case "cheese":
+            return "veggie"
+        case "beef":
+            return "animal"
+        case "chicken":
+            return "animal"
+
 ################################################################################
 
 

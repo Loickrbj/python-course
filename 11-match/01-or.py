@@ -9,7 +9,13 @@
 
 ################################################################################
 def get_food_type(food: str):
-
+    match(food):
+        case "fries" | "tomato": 
+            return "vegan"
+        case "cheese":
+            return "veggie"
+        case "beef" | "chicken":
+            return "animal"
 ################################################################################
 
 

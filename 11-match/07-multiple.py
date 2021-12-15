@@ -22,6 +22,22 @@
 
 ################################################################################
 def compute(command: str) -> int | None:
+    match command.split(" "):
+        case ["add", *numbers]:
+            addition = 0
+            for number in numbers:
+                addition += int(number)
+            return addition
+        case ["multiply", *numbers]:
+            multi = 1
+            for number in numbers:
+                multi *= int(number)
+            return multi
+        case _ :
+            return None
+
+
+
 ################################################################################
 
 # C'est peut-être l'occasion de ré-utiliser la fonction reduce pour le calcul ?

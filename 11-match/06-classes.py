@@ -27,7 +27,6 @@ def location(point):
 # - 30 si l'utilisateur est un User normal
 # - None si ce n'est pas un User
 
-
 from typing import Any
 
 class User:
@@ -40,6 +39,16 @@ example_user = User("John", True, False)
 
 ################################################################################
 def get_subscription_price(user: Any) -> int | None:
+
+    match user : 
+        case User(premium = True, student = True):
+            return 10
+        case User(premium = True, student = False) | User(premium = False, student = True) :
+            return 20
+        case User(premium = False, student = False):
+            return 30
+        case _ :
+            return None
 ################################################################################
 
 # N'oubliez pas que vous pouvez combiner les cas qui donnent le même résultat.
