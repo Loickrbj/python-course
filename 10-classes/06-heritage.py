@@ -40,7 +40,52 @@ print(my_instance.get_number())
 # ou égal à 3
 
 ################################################################################
+class User :
+    def __init__(self,firstname : str, lastname : str, age) -> None:
+        self._firstname = firstname
+        self._lastname = lastname
+        self._age = age
+        self._followers = 0
 
+    def get_full_name(self):
+        return (self._firstname + " " + self._lastname)
+    
+    def _is_adult(self):
+        if self._age >= 18 : 
+            return True
+        else:
+            return False
+    
+    def add_followers(self,count : int) :
+        if self._is_adult():
+            self._followers += count
+        return self._followers
+    
+    def get_age(self):
+        return self._age
+        
+def get_oldest(user1 : User, user2: User):
+    
+    if user1.get_age() > user2.get_age():
+        return user1.get_full_name()
+    else :
+        return user2.get_full_name()
+
+
+class Student(User):
+
+    def __init__(self, firstname : str, lastname : str, age ,school : str, level : int):
+        User.__init__(self, firstname, lastname, age) 
+        self._school = school
+        self._level = level
+
+    def has_degree(self):
+        if self._level >= 3:
+            return True
+        else : 
+            return False
+
+bob = User("Bob","Doe",18)
 ################################################################################
 
 # Pour vérifier que l'héritage est pertinent, demandez-vous si tous les Student

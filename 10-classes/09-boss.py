@@ -71,10 +71,96 @@
 # Ajoutez des prints() pour suivre toute l'intensité de la bataille.
 
 # Bonne chance !
+from typing import TypedDict
+################################################################################
+class Dict_Attack(TypedDict):
+  name : str
+  damage : int
+
+class Pokemon : 
+  _type : str 
+  _life_point : int
+  _attack : Dict_Attack
+
+  def __init__(self,name):
+    self._name : str = name
+
+
+  def get_name(self):
+    return self._name
+
+  def get_type(self):
+    return self._type
+  
+  def is_ok(self):
+    
+    return self._life_point != 0
+  
+  def take_damage(self, damage : int):
+      self._life_point = max(self._life_point-damage,0)
+
+  def fight(self, oppponent : 'Pokemon'):
+    oppponent.take_damage(self._attack["damage"])
+  
+
+class Bulbasaur(Pokemon):
+  _life_point = 40
+  def __init__(self, name : str):
+    super().__init__(name)
+    self._type = "grass"
+    self._attack  = {'name' : "Leed Seed", "damage": 20}
+
+  def take_damage(self, damage: int):
+    return super().take_damage(damage - 5)
+
+class Charmander(Pokemon):
+  _life_point = 50
+  def __init__(self, name : str):
+    super().__init__(name)
+    self._type = "fire"
+
+    self._attack  = {'name' : "Ember", "damage": 30}
+
+  def fight(self, oppponent: 'Pokemon'):
+      if oppponent.get_type() == "grass":
+        oppponent.take_damage(self._attack["damage"] + 10)
+      else:
+        oppponent.take_damage(self._attack["damage"])
+
+class Squirtle(Pokemon):
+  _life_point = 40
+  def __init__(self, name : str):
+    super().__init__(name)
+    self._type = "water"
+    self._attack  = {"name": "Bubble", "damage": 15}
+
+  def fight(self, oppponent: 'Pokemon'):
+      if oppponent.get_type() == "fire":
+        oppponent.take_damage(self._attack["damage"]*2)
+      else:
+        oppponent.take_damage(self._attack["damage"])
+
+  
+
+bulby = Bulbasaur("Bulby")
+sophie_chacharamander = Charmander("sophie_chacharamander")
+
+def fight(pokemon_1 : Pokemon, pokemon_2 : Pokemon):
+  while pokemon_1.is_ok() and pokemon_2.is_ok():
+    pokemon_1.fight(pokemon_2)
+    if(pokemon_2.is_ok()):
+      pokemon_2.fight(pokemon_1)
+  if not pokemon_1.is_ok():
+    print(pokemon_2.get_name() + "gagne")
+    return pokemon_2
+  else :
+    print(pokemon_1.get_name() + "gagne")
+    return pokemon_1
+
+      
 
 ################################################################################
 
-################################################################################
 
 
 
@@ -98,8 +184,7 @@
 
 
 
-
-print('\033[92m✓ OK' if isinstance(fight(Squirtle(""), Charmander("")), Squirtle)
+print('\033[92m✓ OK' if isinstance(fight(Squirtle("lol"), Charmander("iiii")), Squirtle)
   and isinstance(fight(Charmander(""), Squirtle("")), Charmander)
   and isinstance(fight(Squirtle(""), Bulbasaur("")), Bulbasaur)
   and isinstance(fight(Bulbasaur(""), Squirtle("")), Bulbasaur)

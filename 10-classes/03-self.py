@@ -13,7 +13,29 @@
 # La fonction devra renvoyer le nombre de followers final dans tous les cas.
 
 ################################################################################
+class User :
+    def __init__(self,firstname : str, lastname : str, age) -> None:
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.followers = 0
 
+    def get_full_name(self):
+        return (self.firstname + " " + self.lastname)
+    
+    def is_adult(self):
+        if self.age >= 18 : 
+            return True
+        else:
+            return False
+    
+    def add_followers(self,count : int) :
+        if self.is_adult():
+            self.followers += count
+        return self.followers
+        
+
+bob = User("Bob","Doe",18)
 ################################################################################
 
 # C'est pour ce genre de raison qu'on préfère utiliser des getters et setters
