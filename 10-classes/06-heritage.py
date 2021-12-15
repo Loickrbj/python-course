@@ -36,7 +36,7 @@ print(my_instance.get_number())
 # Créez une classe Student qui hérite de User et qui :
 # - possède un attribut privé _school (str)
 # - possède un attribut privé _level (int)
-# - possède une méthode hasDegree() qui renvoit True si le level est supérieur
+# - possède une méthode has_degree() qui renvoit True si le level est supérieur
 # ou égal à 3
 
 ################################################################################

@@ -119,7 +119,7 @@ user.add_followers(3)
 student_with_degree = Student("bob", "doe", 18, "cnam", 3)
 student_with_degree.add_followers(1);
 student_with_degree.add_followers(2);
-student__without_degree = Student("bob", "doe", 10, "cmam", 2)
+student__without_degree = Student("bob", "doe", 18, "cmam", 2)
 student__without_degree.add_followers(1);
 student__without_degree.add_followers(2);
 print('\033[92m✓ OK' if user._followers == 3 and student_with_degree._followers == 3 and student__without_degree._followers == 0 else '\033[91m❌KO')
